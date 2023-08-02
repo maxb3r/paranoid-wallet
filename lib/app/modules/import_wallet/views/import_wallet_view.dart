@@ -11,7 +11,7 @@ class ImportWalletView extends GetView<ImportWalletController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Import Existing  Wallet'),
+        title: const Text('Import Existing Wallet'),
         centerTitle: true,
         backgroundColor: darkColorScheme.background,
         titleTextStyle: TextStyle(color: darkColorScheme.onBackground, fontSize: 16),
