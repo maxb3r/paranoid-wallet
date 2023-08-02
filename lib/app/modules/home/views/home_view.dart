@@ -17,7 +17,6 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: darkColorScheme.background,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,7 +26,7 @@ class HomeView extends GetView<HomeController> {
               width: 246,
               height: 508,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 24),
              Text(
               'Paranoid Wallet',
               style: TextStyle(

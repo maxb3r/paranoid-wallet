@@ -12,8 +12,7 @@ void main() {
       title: "Paranoid Wallet",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
-      theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
-      darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
+      theme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme, iconTheme: IconThemeData(color: darkColorScheme.onBackground)),
     ),
   );
 }

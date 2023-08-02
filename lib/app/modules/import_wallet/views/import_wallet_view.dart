@@ -10,24 +10,34 @@ class ImportWalletView extends GetView<ImportWalletController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Import Existing Wallet'),
+      appBar: AppBar (
+        title: Text('Import Existing Wallet', style: Theme.of(context).textTheme.titleSmall),
         centerTitle: true,
-        backgroundColor: darkColorScheme.background,
-        titleTextStyle: TextStyle(color: darkColorScheme.onBackground, fontSize: 16),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          color: darkColorScheme.onBackground, // Change the color here.
-          onPressed: () {
-            // Add your back button functionality here.
-            Get.back();
-          },
-        ),
       ),
-      body: const Center(
-        child: Text(
-          'ImportWalletView is working',
-          style: TextStyle(fontSize: 20),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 16.0,  right: 16.0),
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 24),
+              Row(
+                children: [
+                  Text(
+                    'Choose the length of your Seedphrase',
+                     style: Theme.of(context).textTheme.titleMedium!.copyWith(color: darkColorScheme.onBackground),
+                  ),
+                ],
+              ),
+               Text(
+                    'Write your Seedphrase down on a piece of paper.' 
+                    'It is not recommended to store them digitally.'
+                    'Only you hold a copy of the keys, if you lose them, your fund will be gone.',
+                    softWrap: true,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: darkColorScheme.onBackground,),
+                  ),
+                ],
+              ),
         ),
       ),
     );
